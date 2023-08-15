@@ -4,6 +4,6 @@ class Solution:
         return sorted(list(s)) == sorted(list(t))
 
 
-if __name__ == "__main__":
-    assert Solution().is_anagram(s="anagram", t="nagaram")
-    assert not Solution().is_anagram(s="rat", t="car")
+if __name__ == '__main__':
+    assert Solution().is_anagram(s='anagram', t='nagaram')
+    assert not Solution().is_anagram(s='rat', t='car')
