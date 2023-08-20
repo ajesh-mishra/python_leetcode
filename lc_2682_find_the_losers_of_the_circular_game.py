@@ -19,5 +19,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    assert Solution().circular_game_losers(5, 2) == [4,5]
-    assert Solution().circular_game_losers(4, 4) == [2,3,4]
+    assert Solution().circular_game_losers(5, 2) == [4, 5]
+    assert Solution().circular_game_losers(4, 4) == [2, 3, 4]
