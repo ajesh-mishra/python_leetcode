@@ -17,7 +17,7 @@ class MyStack:
 
 if __name__ == "__main__":
     obj = MyStack()
-    obj.push(x)
+    obj.push(5)
     param_2 = obj.pop()
     param_3 = obj.top()
     param_4 = obj.empty()
