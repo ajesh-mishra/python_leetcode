@@ -10,7 +10,7 @@ class Solution:
     def sum_root_to_leaf(root: TreeNode | None) -> int:
         nums: list[str] = []
 
-        def dp(node, val: str = '') -> None:
+        def dp(node, val: str = "") -> None:
             if node.left is None and node.right is None:
                 nums.append(val + str(node.val))
                 return
@@ -23,5 +23,5 @@ class Solution:
         return sum([int(num, 2) for num in nums])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(Solution().sum_root_to_leaf())

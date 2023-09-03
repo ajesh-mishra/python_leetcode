@@ -11,7 +11,7 @@ class Solution:
         return n == 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().is_ugly(6)
     assert Solution().is_ugly(1)
     assert not Solution().is_ugly(14)

@@ -19,10 +19,12 @@ class Solution:
             if root.left is None and root.right is None and is_left:
                 _sum = root.val
 
-            return _sum + inner(root.left, is_left=True) + inner(root.right, is_left=False)
+            return (
+                _sum + inner(root.left, is_left=True) + inner(root.right, is_left=False)
+            )
 
         return inner(root=root, is_left=False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(Solution().sum_of_left_leaves(root=TreeNode()))

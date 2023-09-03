@@ -13,7 +13,7 @@ class Solution:
             new_words = {word for word in words if word.startswith(s[i])}
 
             for j in range(i, end):
-                if s[i:j + 1] in new_words:
+                if s[i : j + 1] in new_words:
                     result = min(result, dp(j + 1))
 
             cache[i] = result
@@ -22,6 +22,13 @@ class Solution:
         return dp(0)
 
 
-if __name__ == '__main__':
-    assert Solution().min_extra_char(s="leetscode", dictionary=["leet", "code", "leetcode"]) == 1
-    assert Solution().min_extra_char(s="sayhelloworld", dictionary=["hello", "world"]) == 3
+if __name__ == "__main__":
+    assert (
+        Solution().min_extra_char(
+            s="leetscode", dictionary=["leet", "code", "leetcode"]
+        )
+        == 1
+    )
+    assert (
+        Solution().min_extra_char(s="sayhelloworld", dictionary=["hello", "world"]) == 3
+    )

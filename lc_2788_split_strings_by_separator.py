@@ -8,7 +8,15 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
-    print(Solution().split_words_by_separator(words=["one.two.three", "four.five", "six"], separator="."))
-    print(Solution().split_words_by_separator(words=["$easy$", "$problem$"], separator="$"))
+if __name__ == "__main__":
+    print(
+        Solution().split_words_by_separator(
+            words=["one.two.three", "four.five", "six"], separator="."
+        )
+    )
+    print(
+        Solution().split_words_by_separator(
+            words=["$easy$", "$problem$"], separator="$"
+        )
+    )
     print(Solution().split_words_by_separator(words=["|||"], separator="|"))

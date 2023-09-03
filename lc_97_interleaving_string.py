@@ -22,7 +22,7 @@ class Solution:
         return dfs(0, 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().is_interleave(s1="aabcc", s2="dbbca", s3="aadbbcbcac")
     assert Solution().is_interleave(s1="", s2="", s3="")
     assert not Solution().is_interleave(s1="aabcc", s2="dbbca", s3="aadbbbaccc")

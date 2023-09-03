@@ -19,7 +19,20 @@ class Solution:
         return network_rank
 
 
-if __name__ == '__main__':
-    assert Solution().maximal_network_rank(n=4, roads=[[0, 1], [0, 3], [1, 2], [1, 3]]) == 4
-    assert Solution().maximal_network_rank(n=5, roads=[[0, 1], [0, 3], [1, 2], [1, 3], [2, 3], [2, 4]]) == 5
-    assert Solution().maximal_network_rank(n=8, roads=[[0, 1], [1, 2], [2, 3], [2, 4], [5, 6], [5, 7]]) == 5
+if __name__ == "__main__":
+    assert (
+        Solution().maximal_network_rank(n=4, roads=[[0, 1], [0, 3], [1, 2], [1, 3]])
+        == 4
+    )
+    assert (
+        Solution().maximal_network_rank(
+            n=5, roads=[[0, 1], [0, 3], [1, 2], [1, 3], [2, 3], [2, 4]]
+        )
+        == 5
+    )
+    assert (
+        Solution().maximal_network_rank(
+            n=8, roads=[[0, 1], [1, 2], [2, 3], [2, 4], [5, 6], [5, 7]]
+        )
+        == 5
+    )

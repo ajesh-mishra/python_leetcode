@@ -22,7 +22,7 @@ class Solution:
             return 2
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(Solution().is_winner(player1=[4, 10, 7, 9], player2=[6, 5, 2, 3]))
     print(Solution().is_winner(player1=[3, 5, 7, 6], player2=[8, 10, 10, 2]))
     print(Solution().is_winner(player1=[2, 3], player2=[4, 1]))

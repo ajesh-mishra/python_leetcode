@@ -15,7 +15,7 @@ class MyStack:
         return len(self.stack) == 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     obj = MyStack()
     obj.push(x)
     param_2 = obj.pop()

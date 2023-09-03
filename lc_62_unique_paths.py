@@ -1,7 +1,7 @@
 class Solution:
     @staticmethod
     def unique_paths(m: int, n: int) -> int:
-        cache = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
+        cache: list[list[int]] = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
 
         for i in range(m - 1, -1, -1):
             for j in range(n - 1, -1, -1):
@@ -13,6 +13,6 @@ class Solution:
         return cache[0][0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().unique_paths(m=3, n=2) == 3
     assert Solution().unique_paths(m=3, n=7) == 28

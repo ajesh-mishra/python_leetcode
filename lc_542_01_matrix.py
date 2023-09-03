@@ -22,9 +22,11 @@ class Solution:
             for delta_i, delta_j in [(1, 0), (0, 1), (-1, 0), (0, -1)]:
                 new_i = i + delta_i
                 new_j = j + delta_j
-                if not 0 <= new_i < length \
-                        or not 0 <= new_j < width \
-                        or visited[new_i][new_j]:
+                if (
+                    not 0 <= new_i < length
+                    or not 0 <= new_j < width
+                    or visited[new_i][new_j]
+                ):
                     continue
                 visited[new_i][new_j] = True
                 mat[new_i][new_j] = distance + 1
@@ -33,6 +35,6 @@ class Solution:
         return mat
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(Solution().update_matrix([[0, 0, 0], [0, 1, 0], [0, 0, 0]]))
     print(Solution().update_matrix([[0, 0, 0], [0, 1, 0], [1, 1, 1]]))

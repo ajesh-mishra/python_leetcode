@@ -12,10 +12,16 @@ class Solution:
 
     @staticmethod
     def repeated_substring_pattern_1(s: str) -> bool:
-        return any([True for i in range(1, (len(s) // 2) + 1) if len(s) % i == 0 and s[0:i] * (len(s) // i) == s])
+        return any(
+            [
+                True
+                for i in range(1, (len(s) // 2) + 1)
+                if len(s) % i == 0 and s[0:i] * (len(s) // i) == s
+            ]
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().repeated_substring_pattern("abab")
     assert Solution().repeated_substring_pattern("abcabcabcabc")
     assert not Solution().repeated_substring_pattern("aba")
