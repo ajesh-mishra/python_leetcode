@@ -1,16 +1,49 @@
-# This is a sample Python script.
+"""
+Mostly going to use this script to test IDE features
+"""
+from typing import Iterable
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# Type Hints
+
+# Primitives
+age: int = 20
+name: str = "John"
+is_employed: bool = True
+
+# Sequences
+companies: list[str] = ["TCS", "IBM", "Barclays"]
+cgpas: tuple[float | None, ...] = (80.0, None, 8.5)
+
+# Iterable
+address: dict[str, int | str] = {
+    "flat": 207,
+    "tower": "A",
+    "street": "Gandhi Marg Road",
+    "city": "Bhubaneswar",
+    "state": "Odisha",
+    "pin": 759145,
+}
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f"Hi, {name}")  # Press ⌘F8 to toggle the breakpoint.
+def display_items(items: Iterable) -> None:
+    """
+    This is a generic function that takes an Iterable and displays in the console
+    """
+    for company in items:
+        print(company, end=", ")
 
 
-# Press the green button in the gutter to run the script.
+def display_address(my_address: dict[str, int | str]) -> None:
+    """
+    Takes an address of dict and displays in a table.
+    """
+    for key, value in my_address.items():
+        print(f"{key:<20} {value}")
+
+
 if __name__ == "__main__":
-    print_hi("PyCharm")
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    display_items(companies)
+    print("")
+    display_items(cgpas)
+    print("")
+    display_address(address)
