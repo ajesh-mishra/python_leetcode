@@ -1,5 +1,6 @@
 class Solution:
-    def count_symmetric_integers(self, low: int, high: int) -> int:
+    @staticmethod
+    def count_symmetric_integers(low: int, high: int) -> int:
         def is_symmetric(s: str) -> bool:
             if len(s) % 2 != 0:
                 return False
