@@ -1,6 +1,7 @@
 class Solution:
+    @staticmethod
     def k_items_with_maximum_sum(
-        self, numOnes: int, numZeros: int, numNegOnes: int, k: int
+            numOnes: int, numZeros: int, numNegOnes: int, k: int
     ) -> int:
         if numOnes > k:
             return k
