@@ -6,5 +6,18 @@ class TreeNode:
 
 
 class Solution:
-    def evaluateTree(self, root: TreeNode | None) -> bool:
-        pass
+    @staticmethod
+    def evaluate_tree(root: TreeNode | None) -> bool:
+        def dfs(node: TreeNode | None):
+            if node.val == 1 or node.val == 0:
+                return node.val
+
+            left = dfs(node.left)
+            right = dfs(node.right)
+
+            if node.val == 2:
+                return left | right
+            else:
+                return left & right
+
+        return dfs(root) == 1
